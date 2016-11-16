@@ -1,13 +1,14 @@
 package HomeWork;
-import java.util.Currency;
+
 
 public class USBank extends Bank {
 
-    Curr curr = Curr.USD;
 
-public USBank(long id,String bankCountry, Currency currency, int numberOfEmployee, long rating, long totalCapital){
-    super(id,bankCountry,currency,numberOfEmployee,rating,totalCapital);
-}
+    public USBank(long id, String bankCountry, Curr currency, int numberOfEmployee, long rating, long totalCapital) {
+        super(id, bankCountry, currency, numberOfEmployee, rating, totalCapital);
+    }
+
+    Curr curr = Curr.USD;
 
     public int getMonthlyRate() {
         int monthlyRate = 0;
@@ -68,7 +69,7 @@ public USBank(long id,String bankCountry, Currency currency, int numberOfEmploye
         return getCommission;
     }
 
-    public double moneyPaidMontlyForSalary() {
+    public double moneyPaidMonthlyForSalary() {
         return 0;
     }
 

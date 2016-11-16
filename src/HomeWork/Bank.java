@@ -1,16 +1,14 @@
 package HomeWork;
 
-import java.util.Currency;
-
 abstract class Bank {
     private long id;
     private String bankCountry;
-    private Currency currency;
+    private Curr currency;
     private int numberOfEmployee;
     private long rating;
     private long totalCapital;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployee, long rating, long totalCapital) {
+    public Bank(long id, String bankCountry, Curr currency, int numberOfEmployee, long rating, long totalCapital) {
         this.id = id;
         this.bankCountry = bankCountry;
         this.currency = currency;
@@ -24,7 +22,7 @@ abstract class Bank {
     abstract int getLimitOfFunding();
     abstract int getMonthlyRate();
     abstract int getCommission (int summ);
-    abstract double moneyPaidMontlyForSalary();
+    abstract double moneyPaidMonthlyForSalary();
 
 
     //----------------------------------------------------------------------
@@ -44,11 +42,11 @@ abstract class Bank {
         this.bankCountry = bankCountry;
     }
 
-    public Currency getCurrency() {
+    public Curr getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(Curr currency) {
         this.currency = currency;
     }
 
