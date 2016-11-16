@@ -1,6 +1,6 @@
 package HomeWork;
 
-public class Main {
+public class Main  {
     public static void main(String[] args) {
         //USBank
         //--------------------------------------------------------------------------------
@@ -31,6 +31,9 @@ public class Main {
         User user5 = new User(6161, "Melinda", 40000, 35, "Oracle", 5000, chBank1);
         User user6 = new User(1616, "Anna", 4703.5, 2, "UPS", 1500, chBank2);
 
+        //------------------------------------------------------------------
+      int amount =3600;
+        user1.withdrawOfUser(user1,amount);
 
     }
 }

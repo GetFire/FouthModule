@@ -3,6 +3,9 @@ package HomeWork;
 public class BankSystemImpl implements BankSystem {
     @Override
     public void withdrawOfUser(User user, int amount) {
+        int withdrawal;
+        withdrawal=(int)user.getBalance()-amount;
+        System.out.println(withdrawal);
 
     }
 
