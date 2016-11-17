@@ -36,7 +36,6 @@ public class BankSystemImpl implements BankSystem {
 
     @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
-        //double commission = (double) fromUser.getBank().getCommission(amount) / 100; //переводим в десятичную дробь для удобства в расчетах
         double limitFrom = fromUser.getBank().getLimitOfWithdrawal();
         double limitTo = toUser.getBank().getLimitOfFunding();
         if (amount >= limitFrom) {
