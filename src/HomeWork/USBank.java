@@ -42,8 +42,7 @@ public class USBank extends Bank {
         if (curr == Curr.EUR) {
             LimitOfFunding = 10000;
         } else {
-            System.out.println("Лимит на пополнение отсутствует");
-            LimitOfFunding = 1000000000;
+            LimitOfFunding = Integer.MAX_VALUE;
         }
         return LimitOfFunding;
     }

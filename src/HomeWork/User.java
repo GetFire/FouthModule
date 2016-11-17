@@ -24,7 +24,7 @@ public class User extends BankSystemImpl {
 
     @Override
     public String toString(){
-     return "name "+name+"\n"+"companyName "+companyName+"\n"+"balance "+balance+"\n"+"salary "+salary+"\n"+"Bank "+bank.getCurrency();
+     return "name "+name+"\n"+"companyName "+companyName+"\n"+"balance "+balance+"\n"+"salary "+salary+"\n"+"Bank "+bank;
     }
 
     public long getId() {
@@ -82,6 +82,9 @@ public class User extends BankSystemImpl {
     public void setBank(Bank bank) {
         this.bank = bank;
     }
+
+
+
     //public String toString(long id,String name,double balance, int monthsOfEmployment, String companyName,int salary,Bank bank){
    //   System.out.println("id "+id);
    //    System.out.println("name "+name);

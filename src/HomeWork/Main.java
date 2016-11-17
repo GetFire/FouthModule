@@ -1,6 +1,6 @@
 package HomeWork;
 
-public class Main  {
+public class Main {
     public static void main(String[] args) {
         //USBank
         //--------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ public class Main  {
 
         //Users
         //--------------------------------------------------------------------------------
-        User user1 = new User(1166, "Harry", 1500.4, 25, "Coca-Cola", 2000, usBank1);
+        User user1 = new User(1166, "Harry", 1500, 25, "Coca-Cola", 2000, usBank1);
         User user2 = new User(6611, "Mark", 32000, 120, "Microsoft", 4000, usBank2);
         User user3 = new User(1661, "Jerry", 500, 1, "Amazon", 1200, euBank1);
         User user4 = new User(6116, "Bobby", 25000, 60, "DHL", 2500, euBank2);
@@ -32,8 +32,24 @@ public class Main  {
         User user6 = new User(1616, "Anna", 4703.5, 2, "UPS", 1500, chBank2);
 
         //------------------------------------------------------------------
-      int amount =3600;
-        user1.withdrawOfUser(user1,amount);
+       // int amount = 150;
+       // user1.withdrawOfUser(user1, amount);
+       // System.out.println(user1.getBank().getCommission(amount));
+       // user1.fundUser(user1, amount);
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println(user4.getName()+" "+user4.getBalance());
+        System.out.println(user2.getName()+" "+user2.getBalance());
+
+        System.out.println();
+        user4.transferMoney(user4,user2,500);
+        System.out.println();
+
+        System.out.println(user4.getName()+" "+user4.getBalance());
+        System.out.println(user2.getName()+" "+user2.getBalance());
+
 
     }
 }
