@@ -43,24 +43,19 @@ public class BankSystemImpl implements BankSystem {
             System.out.println("Лимит на отправление превышен!");
         } else if (amount >= limitTo) {
             System.out.println("Лимит на получение превышен!");
-        }else{
-            fromUser.withdrawOfUser(fromUser,amount);
-            toUser.fundUser(toUser,amount);
-            System.out.println(fromUser.getName()+" перевел "+amount+ " на счет "+toUser.getName());
+        } else {
+            fromUser.withdrawOfUser(fromUser, amount);
+            toUser.fundUser(toUser, amount);
+            System.out.println(fromUser.getName() + " перевел " + amount + " на счет " + toUser.getName());
         }
 
     }
 
     @Override
     public void paySalary(User user) {
+        double balance = user.getBalance() + user.getSalary();
+        user.setBalance(balance);
+        System.out.println(balance);
 
-    }
-
-    public static void main(String[] args) {
-        Bank usBank = new USBank(1001, "Ukraine", Curr.USD, 12, 1222, 3455555);
-        User user = new User(1166, "Harry", 1100, 25, "Coca-Cola", 2000, usBank);
-        //System.out.println((double)user.getBank().getCommission(500)/100);
-
-        user.withdrawOfUser(user, 12);
     }
 }

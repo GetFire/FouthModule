@@ -32,23 +32,14 @@ public class Main {
         User user6 = new User(1616, "Anna", 4703.5, 2, "UPS", 1500, chBank2);
 
         //------------------------------------------------------------------
-       // int amount = 150;
-       // user1.withdrawOfUser(user1, amount);
-       // System.out.println(user1.getBank().getCommission(amount));
-       // user1.fundUser(user1, amount);
 
+        user1.withdrawOfUser(user1, 150);
         System.out.println();
+        user3.fundUser(user3, 150);
         System.out.println();
-
-        System.out.println(user4.getName()+" "+user4.getBalance());
-        System.out.println(user2.getName()+" "+user2.getBalance());
-
+        user4.transferMoney(user4,user2,1999);
         System.out.println();
-        user4.transferMoney(user4,user2,500);
-        System.out.println();
-
-        System.out.println(user4.getName()+" "+user4.getBalance());
-        System.out.println(user2.getName()+" "+user2.getBalance());
+        user5.paySalary(user5);
 
 
     }
