@@ -22,7 +22,7 @@ public class Main {
         Bank chBank2 = new ChinaBank(1006, "Singapore", Curr.USD, 68, 126, 1000000000);
 
 
-        //Users
+        //Создаем Users
         //--------------------------------------------------------------------------------
         User user1 = new User(1166, "Harry", 1500, 25, "Coca-Cola", 2000, usBank1);
         User user2 = new User(6611, "Mark", 32000, 120, "Microsoft", 4000, usBank2);
@@ -31,8 +31,9 @@ public class Main {
         User user5 = new User(6161, "Melinda", 40000, 35, "Oracle", 5000, chBank1);
         User user6 = new User(1616, "Anna", 4703.5, 2, "UPS", 1500, chBank2);
 
-        //------------------------------------------------------------------
 
+        //Выполняем операции
+        //------------------------------------------------------------------
         user1.withdrawOfUser(user1, 150);
         System.out.println();
         user3.fundUser(user3, 150);
