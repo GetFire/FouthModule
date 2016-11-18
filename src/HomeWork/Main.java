@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
         user3.fundUser(user3, 150);
         System.out.println();
-        user4.transferMoney(user2, user3, 500);
+        user4.transferMoney(user4, user6, 500);
         System.out.println();
         user5.paySalary(user5);
 
