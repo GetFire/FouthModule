@@ -10,6 +10,7 @@ public class BankSystemImpl implements BankSystem {
             System.out.println("Лимит превышен!");
         } else if (amount >= user.getBalance()) {
             System.out.println("Недостаточно средст на счете!");
+
         } else if (amount < user.getBalance() & amount < user.getBank().getLimitOfWithdrawal()) {
             commission = (double) user.getBank().getCommission(amount) / 100;//переводим в десятичную дробь для удобства в расчетах
             withdrawal = user.getBalance() - ((double) amount * (1 + commission));
@@ -42,10 +43,12 @@ public class BankSystemImpl implements BankSystem {
             System.out.println("Лимит на отправление превышен!");
         } else if (amount >= limitTo) {
             System.out.println("Лимит на получение превышен!");
-        } else {
+        } else if (fromUser != toUser && amount < fromUser.getBalance() && amount < fromUser.getBank().getLimitOfWithdrawal()) {
             fromUser.withdrawOfUser(fromUser, amount);
             toUser.fundUser(toUser, amount);
             System.out.println(fromUser.getName() + " перевел " + amount + " на счет " + toUser.getName());
+        } else {
+            System.out.println("Вы не можете это сделать!");
         }
 
     }
